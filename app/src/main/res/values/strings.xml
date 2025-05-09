@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DOROSimulator</string>
+    <integer-array name="image_list">
+        <item>@drawable/doro1</item>
+        <item>@drawable/doro2</item>
+        <item>@drawable/doro3</item>
+        <item>@drawable/doro4</item>
+        <item>@drawable/doro5</item>
+        <item>@drawable/doro6</item>
+        <item>@drawable/doro7</item>
+        <item>@drawable/doro8</item>
+        <item>@drawable/doro9</item>
+        <item>@drawable/doro10</item>
+    </integer-array>
+</resources>
