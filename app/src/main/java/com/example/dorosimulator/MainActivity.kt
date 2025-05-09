@@ -13,7 +13,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.dorosimulator.Item
 
 class MainActivity : AppCompatActivity() {
     val draw_result = arrayListOf<Item>()
@@ -56,7 +55,12 @@ class MainActivity : AppCompatActivity() {
 
         // 設置Spinner的選擇監聽
         spinner.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parentView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parentView: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 if (position < count.size) {
                     // 根據選擇的項目啟用/禁用按鈕
                     btnspin.isEnabled = count[position] == "1抽" || count[position] == "10抽"
@@ -86,13 +90,10 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, SecActivity::class.java)
                 intent.putExtra("draw_result", draw_result)
                 startActivity(intent)
-                // 更新GridView顯示
-//                gridView.adapter?.notifyDataSetChanged()
             }
 
         }
     }
-
 
     // 抽獎邏輯：根據抽獎次數更新quantity
     private fun performDraw(items: ArrayList<Item>, drawCount: Int) {
